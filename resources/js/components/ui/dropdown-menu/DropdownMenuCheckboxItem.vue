@@ -14,8 +14,12 @@ const props = defineProps<DropdownMenuCheckboxItemProps & { class?: HTMLAttribut
 const emits = defineEmits<DropdownMenuCheckboxItemEmits>();
 
 const delegatedProps = computed(() => {
-    const { class: _, ...delegated } = props;
-
+    const delegated: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(props)) {
+        if (key !== 'class') {
+            delegated[key] = value;
+        }
+    }
     return delegated;
 });
 
@@ -28,7 +32,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits);
         v-bind="forwarded"
         :class="
             cn(
-                `focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4`,
+                `focus:bg-accent focus:text-accent-foreground relative flex cursor-default items-center gap-2 rounded-sm py-1.5 pr-2 pl-8 text-sm outline-hidden select-none data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4`,
                 props.class,
             )
         "
