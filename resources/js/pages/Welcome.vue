@@ -1,12 +1,4 @@
 <script setup lang="ts">
-import DemoCommand from "@/components/demo/DemoCommand.vue";
-import { Button } from "@/components/ui/button";
-import { Kbd } from "@/components/ui/kbd";
-import { dashboard, login, register } from "@/routes";
-import { Head, Link } from "@inertiajs/vue3";
-import { CornerDownLeft } from "lucide-vue-next";
-import { Spinner } from "@/components/ui/spinner";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     Item,
@@ -17,7 +9,15 @@ import {
     ItemMedia,
     ItemTitle,
 } from "@/components/ui/item";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Kbd } from "@/components/ui/kbd";
 import { Progress } from "@/components/ui/progress";
+import { Spinner } from "@/components/ui/spinner";
+import { CornerDownLeft } from "lucide-vue-next";
+import DemoCommand from "@/components/demo/DemoCommand.vue";
+import { Head, Link } from "@inertiajs/vue3";
+import { dashboard, login, register } from "@/routes";
 </script>
 
 <template>
@@ -138,6 +138,17 @@ import { Progress } from "@/components/ui/progress";
                             </CardContent>
                         </Card>
                     </div>
+
+                    <Card class="shadow-none">
+                        <CardContent>
+                            <Item variant="outline" class="bg-muted/20">
+                                <ItemMedia> <Spinner /> </ItemMedia>
+                                <ItemContent>
+                                    <ItemTitle>Loading...</ItemTitle>
+                                </ItemContent>
+                            </Item>
+                        </CardContent>
+                    </Card>
                 </div>
             </section>
         </div>

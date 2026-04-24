@@ -1,13 +1,21 @@
 {
-  "categories": {
-    "correctness": "warn",
-    "suspicious": "warn",
-    "perf": "warn",
-    "style": "warn",
-    "restriction": "warn"
-  },
-  "env": {
-    "browser": true,
-    "es2021": true
-  }
+    "categories": {
+        "correctness": "warn",
+        "suspicious": "warn",
+        "perf": "warn",
+        "style": "warn",
+        "restriction": "warn"
+    },
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "rules": {
+        "eslint/no-shadow": "off",
+        "oxc/no-async-await": "off",
+        "oxc/no-optional-chaining": "off",
+        "eslint-plugin-unicorn/filename-case": "off",
+        "eslint-plugin-unicorn/no-null": "off",
+        "eslint/sort-imports": "off"
+    }
 }
