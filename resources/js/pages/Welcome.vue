@@ -62,7 +62,7 @@ import { Progress } from "@/components/ui/progress";
                 <div class="grid grid-cols-4 gap-8">
                     <div class="rounded-lg border bg-white p-4 text-sm">
                         <div class="flex items-center gap-1 text-xs text-muted-foreground">
-                            <Kbd class="border bg-muted/50"> <CornerDownLeft size="12" /> </Kbd>Go
+                            <Kbd class="border bg-muted/50"> <CornerDownLeft :size="12" /> </Kbd>Go
                             to page
                         </div>
                     </div>
