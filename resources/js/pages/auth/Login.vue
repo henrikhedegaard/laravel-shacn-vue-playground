@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import AuthenticatedSessionController from '@/actions/App/Http/Controllers/Auth/AuthenticatedSessionController';
-import InputError from '@/components/InputError.vue';
-import TextLink from '@/components/TextLink.vue';
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import AuthBase from '@/layouts/AuthLayout.vue';
-import { register } from '@/routes';
-import { request } from '@/routes/password';
-import { Form, Head } from '@inertiajs/vue3';
-import { LoaderCircle } from 'lucide-vue-next';
+import AuthenticatedSessionController from "@/actions/App/Http/Controllers/Auth/AuthenticatedSessionController";
+import InputError from "@/components/InputError.vue";
+import TextLink from "@/components/TextLink.vue";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import AuthBase from "@/layouts/AuthLayout.vue";
+import { register } from "@/routes";
+import { request } from "@/routes/password";
+import { Form, Head } from "@inertiajs/vue3";
+import { LoaderCircle } from "lucide-vue-next";
 
 defineProps<{
     status?: string;
@@ -25,10 +25,7 @@ defineProps<{
     >
         <Head title="Log in" />
 
-        <div
-            v-if="status"
-            class="mb-4 text-center text-sm font-medium text-green-600"
-        >
+        <div v-if="status" class="mb-4 text-center text-sm font-medium text-green-600">
             {{ status }}
         </div>
 
@@ -92,10 +89,7 @@ defineProps<{
                     :disabled="processing"
                     data-test="login-button"
                 >
-                    <LoaderCircle
-                        v-if="processing"
-                        class="h-4 w-4 animate-spin"
-                    />
+                    <LoaderCircle v-if="processing" class="h-4 w-4 animate-spin" />
                     Log in
                 </Button>
             </div>

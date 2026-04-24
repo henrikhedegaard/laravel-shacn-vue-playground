@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import PasswordController from '@/actions/App/Http/Controllers/Settings/PasswordController';
-import InputError from '@/components/InputError.vue';
-import AppLayout from '@/layouts/AppLayout.vue';
-import SettingsLayout from '@/layouts/settings/Layout.vue';
-import { edit } from '@/routes/password';
-import { Form, Head } from '@inertiajs/vue3';
-import { ref } from 'vue';
+import PasswordController from "@/actions/App/Http/Controllers/Settings/PasswordController";
+import InputError from "@/components/InputError.vue";
+import AppLayout from "@/layouts/AppLayout.vue";
+import SettingsLayout from "@/layouts/settings/Layout.vue";
+import { edit } from "@/routes/password";
+import { Form, Head } from "@inertiajs/vue3";
+import { ref } from "vue";
 
-import HeadingSmall from '@/components/HeadingSmall.vue';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { type BreadcrumbItem } from '@/types';
+import HeadingSmall from "@/components/HeadingSmall.vue";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import type { BreadcrumbItem } from "@/types";
 
 const breadcrumbItems: BreadcrumbItem[] = [
     {
-        title: 'Password settings',
         href: edit().url,
+        title: "Password settings",
     },
 ];
 
@@ -41,11 +41,7 @@ const currentPasswordInput = ref<HTMLInputElement | null>(null);
                         preserveScroll: true,
                     }"
                     reset-on-success
-                    :reset-on-error="[
-                        'password',
-                        'password_confirmation',
-                        'current_password',
-                    ]"
+                    :reset-on-error="['password', 'password_confirmation', 'current_password']"
                     class="space-y-6"
                     v-slot="{ errors, processing, recentlySuccessful }"
                 >
@@ -78,9 +74,7 @@ const currentPasswordInput = ref<HTMLInputElement | null>(null);
                     </div>
 
                     <div class="grid gap-2">
-                        <Label for="password_confirmation"
-                            >Confirm password</Label
-                        >
+                        <Label for="password_confirmation">Confirm password</Label>
                         <Input
                             id="password_confirmation"
                             name="password_confirmation"
@@ -93,9 +87,7 @@ const currentPasswordInput = ref<HTMLInputElement | null>(null);
                     </div>
 
                     <div class="flex items-center gap-4">
-                        <Button
-                            :disabled="processing"
-                            data-test="update-password-button"
+                        <Button :disabled="processing" data-test="update-password-button"
                             >Save password</Button
                         >
 
@@ -105,10 +97,7 @@ const currentPasswordInput = ref<HTMLInputElement | null>(null);
                             leave-active-class="transition ease-in-out"
                             leave-to-class="opacity-0"
                         >
-                            <p
-                                v-show="recentlySuccessful"
-                                class="text-sm text-neutral-600"
-                            >
+                            <p v-show="recentlySuccessful" class="text-sm text-neutral-600">
                                 Saved.
                             </p>
                         </Transition>

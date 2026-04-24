@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import EmailVerificationNotificationController from '@/actions/App/Http/Controllers/Auth/EmailVerificationNotificationController';
-import TextLink from '@/components/TextLink.vue';
-import { Button } from '@/components/ui/button';
-import AuthLayout from '@/layouts/AuthLayout.vue';
-import { logout } from '@/routes';
-import { Form, Head } from '@inertiajs/vue3';
-import { LoaderCircle } from 'lucide-vue-next';
+import EmailVerificationNotificationController from "@/actions/App/Http/Controllers/Auth/EmailVerificationNotificationController";
+import TextLink from "@/components/TextLink.vue";
+import { Button } from "@/components/ui/button";
+import AuthLayout from "@/layouts/AuthLayout.vue";
+import { logout } from "@/routes";
+import { Form, Head } from "@inertiajs/vue3";
+import { LoaderCircle } from "lucide-vue-next";
 
 defineProps<{
     status?: string;
@@ -23,8 +23,8 @@ defineProps<{
             v-if="status === 'verification-link-sent'"
             class="mb-4 text-center text-sm font-medium text-green-600"
         >
-            A new verification link has been sent to the email address you
-            provided during registration.
+            A new verification link has been sent to the email address you provided during
+            registration.
         </div>
 
         <Form
@@ -37,11 +37,7 @@ defineProps<{
                 Resend verification email
             </Button>
 
-            <TextLink
-                :href="logout()"
-                as="button"
-                class="mx-auto block text-sm"
-            >
+            <TextLink :href="logout()" as="button" class="mx-auto block text-sm">
                 Log out
             </TextLink>
         </Form>

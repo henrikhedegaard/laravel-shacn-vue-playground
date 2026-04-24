@@ -12,9 +12,9 @@ defineOptions({
 })
 
 const props = withDefaults(defineProps<SidebarProps>(), {
+  collapsible: 'offcanvas',
   side: 'left',
   variant: 'sidebar',
-  collapsible: 'offcanvas',
 })
 
 const { isMobile, state, openMobile, setOpenMobile } = useSidebar()

@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import RegisteredUserController from '@/actions/App/Http/Controllers/Auth/RegisteredUserController';
-import InputError from '@/components/InputError.vue';
-import TextLink from '@/components/TextLink.vue';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import AuthBase from '@/layouts/AuthLayout.vue';
-import { login } from '@/routes';
-import { Form, Head } from '@inertiajs/vue3';
-import { LoaderCircle } from 'lucide-vue-next';
+import RegisteredUserController from "@/actions/App/Http/Controllers/Auth/RegisteredUserController";
+import InputError from "@/components/InputError.vue";
+import TextLink from "@/components/TextLink.vue";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import AuthBase from "@/layouts/AuthLayout.vue";
+import { login } from "@/routes";
+import { Form, Head } from "@inertiajs/vue3";
+import { LoaderCircle } from "lucide-vue-next";
 </script>
 
 <template>
@@ -89,20 +89,14 @@ import { LoaderCircle } from 'lucide-vue-next';
                     :disabled="processing"
                     data-test="register-user-button"
                 >
-                    <LoaderCircle
-                        v-if="processing"
-                        class="h-4 w-4 animate-spin"
-                    />
+                    <LoaderCircle v-if="processing" class="h-4 w-4 animate-spin" />
                     Create account
                 </Button>
             </div>
 
             <div class="text-center text-sm text-muted-foreground">
                 Already have an account?
-                <TextLink
-                    :href="login()"
-                    class="underline underline-offset-4"
-                    :tabindex="6"
+                <TextLink :href="login()" class="underline underline-offset-4" :tabindex="6"
                     >Log in</TextLink
                 >
             </div>
