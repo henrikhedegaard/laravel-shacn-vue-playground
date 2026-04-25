@@ -19,6 +19,7 @@ import { Progress } from "@/components/ui/progress";
 import { Spinner } from "@/components/ui/spinner";
 import { CornerDownLeft } from "lucide-vue-next";
 import DemoCommand from "@/components/demo/DemoCommand.vue";
+import CommandPalette from "@/components/CommandPalette.vue";
 import { Head, Link } from "@inertiajs/vue3";
 import { dashboard, login, register } from "@/routes";
 </script>
@@ -28,6 +29,9 @@ import { dashboard, login, register } from "@/routes";
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
+
+    <CommandPalette />
+
     <div
         class="flex min-h-screen flex-col items-center bg-neutral-50 px-6 text-neutral-800 lg:justify-center lg:px-8 dark:bg-neutral-800"
     >
@@ -35,6 +39,12 @@ import { dashboard, login, register } from "@/routes";
             class="mb-6 w-full max-w-80 border-b py-4 text-sm not-has-[nav]:hidden lg:max-w-6xl"
         >
             <nav class="flex items-center justify-end gap-4">
+                <Link
+                    href="/components"
+                    class="inline-block rounded-sm border border-transparent px-5 py-1.5 text-sm leading-normal text-neutral-800 hover:border-[#19140035] dark:text-[#EDEDEC] dark:hover:border-[#3E3E3A]"
+                >
+                    Components
+                </Link>
                 <Link
                     v-if="$page.props.auth.user"
                     :href="dashboard()"
