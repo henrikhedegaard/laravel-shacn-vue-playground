@@ -2,12 +2,15 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     Item,
-    ItemActions,
-    ItemContent,
-    ItemDescription,
-    ItemFooter,
+    ItemGroup,
+    ItemSeparator,
     ItemMedia,
+    ItemContent,
     ItemTitle,
+    ItemDescription,
+    ItemActions,
+    ItemHeader,
+    ItemFooter,
 } from "@/components/ui/item";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -149,6 +152,87 @@ import { dashboard, login, register } from "@/routes";
                             </Item>
                         </CardContent>
                     </Card>
+
+                    <div class="col-span-4">
+                        <Card class="shadow-none">
+                            <CardHeader>
+                                <CardTitle>Item - All Primitives</CardTitle>
+                                <CardDescription
+                                    >Demo using all Item component primitives</CardDescription
+                                >
+                            </CardHeader>
+                            <CardContent>
+                                <ItemGroup class="flex flex-col gap-5">
+                                    <Item variant="outline">
+                                        <ItemHeader>
+                                            <ItemMedia>
+                                                <div
+                                                    class="flex size-10 items-center justify-center rounded-full bg-primary text-primary-foreground"
+                                                >
+                                                    JD
+                                                </div>
+                                            </ItemMedia>
+                                            <ItemContent>
+                                                <ItemTitle>John Doe</ItemTitle>
+                                                <ItemDescription
+                                                    >Software Engineer • San
+                                                    Francisco</ItemDescription
+                                                >
+                                            </ItemContent>
+                                            <ItemActions>
+                                                <Button variant="ghost" size="sm"
+                                                    >View Profile</Button
+                                                >
+                                                <Button variant="outline" size="sm">Message</Button>
+                                            </ItemActions>
+                                        </ItemHeader>
+                                        <ItemFooter>
+                                            <div
+                                                class="flex items-center gap-4 text-xs text-muted-foreground"
+                                            >
+                                                <span>Member since Jan 2024</span>
+                                                <Badge variant="secondary">Pro</Badge>
+                                            </div>
+                                        </ItemFooter>
+                                    </Item>
+
+                                    <ItemSeparator />
+
+                                    <Item variant="outline">
+                                        <ItemHeader>
+                                            <ItemMedia>
+                                                <div
+                                                    class="flex size-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground"
+                                                >
+                                                    AS
+                                                </div>
+                                            </ItemMedia>
+                                            <ItemContent>
+                                                <ItemTitle>Alice Smith</ItemTitle>
+                                                <ItemDescription
+                                                    >Designer • New York</ItemDescription
+                                                >
+                                            </ItemContent>
+                                            <ItemActions>
+                                                <Button variant="ghost" size="sm"
+                                                    >View Profile</Button
+                                                >
+                                                <Button variant="outline" size="sm">Message</Button>
+                                            </ItemActions>
+                                        </ItemHeader>
+                                        <ItemFooter>
+                                            <div
+                                                class="flex items-center gap-4 text-xs text-muted-foreground"
+                                            >
+                                                <span>Member since Mar 2024</span>
+                                                <Badge variant="outline">Free</Badge>
+                                            </div>
+                                        </ItemFooter>
+                                    </Item>
+                                </ItemGroup>
+                            </CardContent>
+                        </Card>
+                    </div>
                 </div>
             </section>
         </div>
