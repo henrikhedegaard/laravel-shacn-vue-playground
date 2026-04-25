@@ -26,19 +26,19 @@ import PageLayout from "@/components/PageLayout.vue";
             <!-- Background Gradient -->
             <div class="absolute inset-0 -z-10">
                 <div
-                    class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-blue-950 dark:via-neutral-900 dark:to-indigo-950"
+                    class="absolute inset-0 bg-linear-to-br from-blue-50 via-white to-indigo-50 dark:from-blue-950 dark:via-neutral-900 dark:to-indigo-950"
                 />
                 <div
-                    class="absolute inset-0 bg-[linear-gradient(to_right,#dbeafe_1px,transparent_1px),linear-gradient(to_bottom,#dbeafe_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e3a5f_1px,transparent_1px),linear-gradient(to_bottom,#1e3a5f_1px,transparent_1px)] bg-[size:40px_40px]"
+                    class="absolute inset-0 bg-[linear-gradient(to_right,#dbeafe_1px,transparent_1px),linear-gradient(to_bottom,#dbeafe_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e3a5f_1px,transparent_1px),linear-gradient(to_bottom,#1e3a5f_1px,transparent_1px)] bg-size-[40px_40px]"
                 />
             </div>
 
             <!-- Gradient Orbs -->
             <div
-                class="absolute top-20 left-1/4 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl dark:from-blue-600/20 dark:to-cyan-600/20"
+                class="absolute top-20 left-1/4 -translate-x-1/2 w-96 h-96 bg-linear-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl dark:from-blue-600/20 dark:to-cyan-600/20"
             />
             <div
-                class="absolute bottom-20 right-1/4 translate-x-1/2 w-96 h-96 bg-gradient-to-r from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl dark:from-indigo-600/20 dark:to-blue-600/20"
+                class="absolute bottom-20 right-1/4 translate-x-1/2 w-96 h-96 bg-linear-to-r from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl dark:from-indigo-600/20 dark:to-blue-600/20"
             />
 
             <!-- Content -->
@@ -50,7 +50,7 @@ import PageLayout from "@/components/PageLayout.vue";
                     </Badge>
 
                     <h1
-                        class="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900 bg-clip-text text-transparent dark:from-white dark:via-neutral-200 dark:to-white"
+                        class="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-linear-to-r from-neutral-900 via-neutral-700 to-neutral-900 bg-clip-text text-transparent dark:from-white dark:via-neutral-200 dark:to-white"
                     >
                         Build Beautiful<br />UI Components
                     </h1>
@@ -117,7 +117,7 @@ import PageLayout from "@/components/PageLayout.vue";
                     class="group relative overflow-hidden rounded-2xl border bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
                 >
                     <div
-                        class="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 text-white mb-4"
+                        class="flex size-12 items-center justify-center rounded-xl bg-linear-to-br from-blue-500 to-blue-600 text-white mb-4"
                     >
                         <Code2 :size="24" />
                     </div>
@@ -133,7 +133,7 @@ import PageLayout from "@/components/PageLayout.vue";
                     class="group relative overflow-hidden rounded-2xl border bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
                 >
                     <div
-                        class="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 text-white mb-4"
+                        class="flex size-12 items-center justify-center rounded-xl bg-linear-to-br from-purple-500 to-purple-600 text-white mb-4"
                     >
                         <Palette :size="24" />
                     </div>
@@ -148,7 +148,7 @@ import PageLayout from "@/components/PageLayout.vue";
                     class="group relative overflow-hidden rounded-2xl border bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
                 >
                     <div
-                        class="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-green-600 text-white mb-4"
+                        class="flex size-12 items-center justify-center rounded-xl bg-linear-to-br from-green-500 to-green-600 text-white mb-4"
                     >
                         <Zap :size="24" />
                     </div>
@@ -164,7 +164,7 @@ import PageLayout from "@/components/PageLayout.vue";
                     class="group relative overflow-hidden rounded-2xl border bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
                 >
                     <div
-                        class="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 text-white mb-4"
+                        class="flex size-12 items-center justify-center rounded-xl bg-linear-to-br from-orange-500 to-orange-600 text-white mb-4"
                     >
                         <Layout :size="24" />
                     </div>
@@ -180,7 +180,7 @@ import PageLayout from "@/components/PageLayout.vue";
                     class="group relative overflow-hidden rounded-2xl border bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
                 >
                     <div
-                        class="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-pink-500 to-pink-600 text-white mb-4"
+                        class="flex size-12 items-center justify-center rounded-xl bg-linear-to-br from-pink-500 to-pink-600 text-white mb-4"
                     >
                         <Layers :size="24" />
                     </div>
@@ -195,7 +195,7 @@ import PageLayout from "@/components/PageLayout.vue";
                     class="group relative overflow-hidden rounded-2xl border bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-950"
                 >
                     <div
-                        class="flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-white mb-4"
+                        class="flex size-12 items-center justify-center rounded-xl bg-linear-to-br from-cyan-500 to-cyan-600 text-white mb-4"
                     >
                         <CheckCircle2 :size="24" />
                     </div>
@@ -210,7 +210,7 @@ import PageLayout from "@/components/PageLayout.vue";
         <!-- Component Showcase Section -->
         <div class="relative overflow-hidden bg-blue-50 dark:bg-blue-950 py-24">
             <div
-                class="absolute inset-0 bg-[linear-gradient(to_right,#dbeafe_1px,transparent_1px),linear-gradient(to_bottom,#dbeafe_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e3a5f_1px,transparent_1px),linear-gradient(to_bottom,#1e3a5f_1px,transparent_1px)] bg-[size:40px_40px]"
+                class="absolute inset-0 bg-[linear-gradient(to_right,#dbeafe_1px,transparent_1px),linear-gradient(to_bottom,#dbeafe_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e3a5f_1px,transparent_1px),linear-gradient(to_bottom,#1e3a5f_1px,transparent_1px)] bg-size-[40px_40px]"
             />
 
             <div class="relative mx-auto max-w-6xl px-4">
@@ -334,14 +334,14 @@ import PageLayout from "@/components/PageLayout.vue";
         <!-- CTA Section -->
         <div class="mx-auto max-w-6xl px-4 py-24">
             <div
-                class="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-blue-50 to-indigo-50 p-12 text-center dark:border-blue-900 dark:from-blue-950 dark:to-indigo-950"
+                class="relative overflow-hidden rounded-3xl border bg-linear-to-br from-blue-50 to-indigo-50 p-12 text-center dark:border-blue-900 dark:from-blue-950 dark:to-indigo-950"
             >
                 <!-- Background Decoration -->
                 <div
-                    class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"
+                    class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-linear-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"
                 />
                 <div
-                    class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-64 h-64 bg-gradient-to-br from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl"
+                    class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-64 h-64 bg-linear-to-br from-indigo-400/20 to-blue-400/20 rounded-full blur-3xl"
                 />
 
                 <div class="relative">
