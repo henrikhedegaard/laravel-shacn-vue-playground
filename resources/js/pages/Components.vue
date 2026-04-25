@@ -11,6 +11,11 @@ import PageLayout from "@/components/PageLayout.vue";
     >
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <ComponentCard
+                title="Alert Dialog"
+                description="A modal dialog that interrupts the user with important content"
+                href="/components/alert-dialog"
+            />
+            <ComponentCard
                 title="Avatar"
                 description="An image element with a fallback for representing the user"
                 href="/components/avatar"
@@ -31,9 +36,24 @@ import PageLayout from "@/components/PageLayout.vue";
                 href="/components/button"
             />
             <ComponentCard
+                title="Button Group"
+                description="A group of buttons that work together as a single unit"
+                href="/components/button-group"
+            />
+            <ComponentCard
                 title="Card"
                 description="Displays a card with header, content, and footer"
                 href="/components/card"
+            />
+            <ComponentCard
+                title="Carousel"
+                description="A carousel component for sliding content"
+                href="/components/carousel"
+            />
+            <ComponentCard
+                title="Chart"
+                description="Chart components for data visualization"
+                href="/components/chart"
             />
             <ComponentCard
                 title="Checkbox"
@@ -46,9 +66,19 @@ import PageLayout from "@/components/PageLayout.vue";
                 href="/components/collapsible"
             />
             <ComponentCard
+                title="Combobox"
+                description="A searchable select component"
+                href="/components/combobox"
+            />
+            <ComponentCard
                 title="Command"
                 description="Fast, composable, unstyled command menu"
                 href="/components/command"
+            />
+            <ComponentCard
+                title="Context Menu"
+                description="A contextual menu that appears when right-clicking"
+                href="/components/context-menu"
             />
             <ComponentCard
                 title="Dialog"
@@ -59,6 +89,26 @@ import PageLayout from "@/components/PageLayout.vue";
                 title="Dropdown Menu"
                 description="Displays a menu to the user triggered by a button"
                 href="/components/dropdown-menu"
+            />
+            <ComponentCard
+                title="Empty"
+                description="An empty state component for when there's no content"
+                href="/components/empty"
+            />
+            <ComponentCard
+                title="Field"
+                description="A form field with label, description, and error handling"
+                href="/components/field"
+            />
+            <ComponentCard
+                title="Form"
+                description="A form with validation and error handling"
+                href="/components/form"
+            />
+            <ComponentCard
+                title="Hover Card"
+                description="A card that appears when hovering over an element"
+                href="/components/hover-card"
             />
             <ComponentCard
                 title="Input"
@@ -101,6 +151,21 @@ import PageLayout from "@/components/PageLayout.vue";
                 href="/components/progress"
             />
             <ComponentCard
+                title="Radio Group"
+                description="A group of radio buttons for single selection"
+                href="/components/radio-group"
+            />
+            <ComponentCard
+                title="Scroll Area"
+                description="A scrollable area with custom scrollbars"
+                href="/components/scroll-area"
+            />
+            <ComponentCard
+                title="Select"
+                description="A dropdown select component"
+                href="/components/select"
+            />
+            <ComponentCard
                 title="Separator"
                 description="Visually separates content"
                 href="/components/separator"
@@ -121,9 +186,49 @@ import PageLayout from "@/components/PageLayout.vue";
                 href="/components/skeleton"
             />
             <ComponentCard
+                title="Sonner"
+                description="A toast notification component"
+                href="/components/sonner"
+            />
+            <ComponentCard
                 title="Spinner"
                 description="Displays an animated loading indicator"
                 href="/components/spinner"
+            />
+            <ComponentCard
+                title="Stepper"
+                description="A step-by-step progress indicator"
+                href="/components/stepper"
+            />
+            <ComponentCard
+                title="Switch"
+                description="A toggle switch component"
+                href="/components/switch"
+            />
+            <ComponentCard
+                title="Table"
+                description="A table component for displaying structured data"
+                href="/components/table-component"
+            />
+            <ComponentCard
+                title="Tabs"
+                description="A set of layered sections of content"
+                href="/components/tabs-component"
+            />
+            <ComponentCard
+                title="Tags Input"
+                description="An input field for tags with add/remove functionality"
+                href="/components/tags-input"
+            />
+            <ComponentCard
+                title="Toggle"
+                description="A toggle button component"
+                href="/components/toggle"
+            />
+            <ComponentCard
+                title="Toggle Group"
+                description="A group of toggle buttons"
+                href="/components/toggle-group"
             />
         </div>
     </PageLayout>

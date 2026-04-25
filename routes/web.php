@@ -107,5 +107,89 @@ Route::get('components/input-group', function () {
     return Inertia::render('components/InputGroup');
 })->name('components.input-group');
 
+Route::get('components/alert-dialog', function () {
+    return Inertia::render('components/AlertDialog');
+})->name('components.alert-dialog');
+
+Route::get('components/button-group', function () {
+    return Inertia::render('components/ButtonGroup');
+})->name('components.button-group');
+
+Route::get('components/carousel', function () {
+    return Inertia::render('components/Carousel');
+})->name('components.carousel');
+
+Route::get('components/chart', function () {
+    return Inertia::render('components/Chart');
+})->name('components.chart');
+
+Route::get('components/context-menu', function () {
+    return Inertia::render('components/ContextMenu');
+})->name('components.context-menu');
+
+Route::get('components/empty', function () {
+    return Inertia::render('components/Empty');
+})->name('components.empty');
+
+Route::get('components/field', function () {
+    return Inertia::render('components/Field');
+})->name('components.field');
+
+Route::get('components/form', function () {
+    return Inertia::render('components/Form');
+})->name('components.form');
+
+Route::get('components/hover-card', function () {
+    return Inertia::render('components/HoverCard');
+})->name('components.hover-card');
+
+Route::get('components/select', function () {
+    return Inertia::render('components/Select');
+})->name('components.select');
+
+Route::get('components/combobox', function () {
+    return Inertia::render('components/Combobox');
+})->name('components.combobox');
+
+Route::get('components/radio-group', function () {
+    return Inertia::render('components/RadioGroup');
+})->name('components.radio-group');
+
+Route::get('components/switch', function () {
+    return Inertia::render('components/Switch');
+})->name('components.switch');
+
+Route::get('components/toggle', function () {
+    return Inertia::render('components/Toggle');
+})->name('components.toggle');
+
+Route::get('components/toggle-group', function () {
+    return Inertia::render('components/ToggleGroup');
+})->name('components.toggle-group');
+
+Route::get('components/tags-input', function () {
+    return Inertia::render('components/TagsInput');
+})->name('components.tags-input');
+
+Route::get('components/scroll-area', function () {
+    return Inertia::render('components/ScrollArea');
+})->name('components.scroll-area');
+
+Route::get('components/sonner', function () {
+    return Inertia::render('components/Sonner');
+})->name('components.sonner');
+
+Route::get('components/stepper', function () {
+    return Inertia::render('components/Stepper');
+})->name('components.stepper');
+
+Route::get('components/table-component', function () {
+    return Inertia::render('components/TableComponent');
+})->name('components.table-component');
+
+Route::get('components/tabs-component', function () {
+    return Inertia::render('components/TabsComponent');
+})->name('components.tabs-component');
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
