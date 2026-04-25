@@ -9,12 +9,12 @@ import {
     CommandInput,
     CommandItem,
     CommandList,
-    CommandSeparator,
     CommandShortcut,
 } from "@/components/ui/command";
 import { Search } from "lucide-vue-next";
+import { useCommandPalette } from "@/composables/useCommandPalette";
 
-const open = ref(false);
+const { open, close } = useCommandPalette();
 
 interface Component {
     description: string;
@@ -190,7 +190,7 @@ onUnmounted(() => {
                         :value="component.name"
                         as-child
                     >
-                        <Link :href="component.href" @click="open = false">
+                        <Link :href="component.href" @click="close()">
                             <span>{{ component.name }}</span>
                             <span class="ml-2 text-sm text-muted-foreground">
                                 {{ component.description }}
