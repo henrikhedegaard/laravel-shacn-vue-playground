@@ -28,14 +28,112 @@ const components: Component[] = [
         description: "An image element with a fallback for representing the user",
         href: "/components/avatar",
         name: "Avatar",
-        shortcut: "A",
+    },
+    {
+        description: "Displays a badge or component that looks like a badge",
+        href: "/components/badge",
+        name: "Badge",
+    },
+    {
+        description: "Displays the path to the current resource",
+        href: "/components/breadcrumb",
+        name: "Breadcrumb",
+    },
+    {
+        description: "Displays a button or a component that looks like a button",
+        href: "/components/button",
+        name: "Button",
+    },
+    {
+        description: "Displays a card with header, content, and footer",
+        href: "/components/card",
+        name: "Card",
+    },
+    {
+        description: "Displays a checkbox that can be checked or unchecked",
+        href: "/components/checkbox",
+        name: "Checkbox",
+    },
+    {
+        description: "An interactive component which expands/collapses a panel",
+        href: "/components/collapsible",
+        name: "Collapsible",
+    },
+    {
+        description: "Fast, composable, unstyled command menu",
+        href: "/components/command",
+        name: "Command",
+    },
+    {
+        description: "A window overlaid on either the primary window or another dialog window",
+        href: "/components/dialog",
+        name: "Dialog",
+    },
+    {
+        description: "Displays a menu to the user triggered by a button",
+        href: "/components/dropdown-menu",
+        name: "Dropdown Menu",
+    },
+    {
+        description: "Displays a form input field",
+        href: "/components/input",
+        name: "Input",
     },
     {
         description:
             "A versatile component for displaying content with media, title, and description",
         href: "/components/item",
         name: "Item",
-        shortcut: "I",
+    },
+    {
+        description: "Displays a keyboard shortcut or key",
+        href: "/components/kbd",
+        name: "Kbd",
+    },
+    {
+        description: "Renders an accessible label associated with controls",
+        href: "/components/label",
+        name: "Label",
+    },
+    {
+        description: "A collection of links for navigating websites",
+        href: "/components/navigation-menu",
+        name: "Navigation Menu",
+    },
+    {
+        description: "Accessible pin input component for OTP and verification codes",
+        href: "/components/pin-input",
+        name: "Pin Input",
+    },
+    {
+        description: "Displays an indicator showing the completion progress of a task",
+        href: "/components/progress",
+        name: "Progress",
+    },
+    {
+        description: "Visually separates content",
+        href: "/components/separator",
+        name: "Separator",
+    },
+    {
+        description: "Extends the Dialog component to display content from any edge",
+        href: "/components/sheet",
+        name: "Sheet",
+    },
+    {
+        description: "A composable, themeable and customizable sidebar component",
+        href: "/components/sidebar",
+        name: "Sidebar",
+    },
+    {
+        description: "Use to show a placeholder while content is loading",
+        href: "/components/skeleton",
+        name: "Skeleton",
+    },
+    {
+        description: "Displays an animated loading indicator",
+        href: "/components/spinner",
+        name: "Spinner",
     },
 ];
 
