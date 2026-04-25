@@ -103,5 +103,9 @@ Route::get('components/skeleton', function () {
     return Inertia::render('components/Skeleton');
 })->name('components.skeleton');
 
+Route::get('components/input-group', function () {
+    return Inertia::render('components/InputGroup');
+})->name('components.input-group');
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';

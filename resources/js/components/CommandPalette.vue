@@ -75,15 +75,23 @@ const components: Component[] = [
         name: "Dropdown Menu",
     },
     {
-        description: "Displays a form input field",
-        href: "/components/input",
         name: "Input",
+        href: "/components/input",
+        description: "Displays a form input field",
+        shortcut: "⌘I",
     },
     {
+        name: "Input Group",
+        href: "/components/input-group",
+        description: "Display additional information or actions to an input or textarea",
+        shortcut: "⌘G",
+    },
+    {
+        name: "Item",
+        href: "/components/item",
         description:
             "A versatile component for displaying content with media, title, and description",
-        href: "/components/item",
-        name: "Item",
+        shortcut: "⌘T",
     },
     {
         description: "Displays a keyboard shortcut or key",
