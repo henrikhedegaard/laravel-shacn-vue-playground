@@ -24,6 +24,7 @@ const setCookie = (name: string, value: string, days = 365) => {
 
     const maxAge = days * 24 * 60 * 60;
 
+    // eslint-disable-next-line unicorn/no-document-cookie
     document.cookie = `${name}=${value};path=/;max-age=${maxAge};SameSite=Lax`;
 };
 

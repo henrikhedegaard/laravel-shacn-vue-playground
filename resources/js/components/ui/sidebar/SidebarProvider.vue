@@ -40,6 +40,7 @@ function setOpen(value: boolean) {
     open.value = value; // Emits('update:open', value)
 
     // This sets the cookie to keep the sidebar state.
+    // eslint-disable-next-line unicorn/no-document-cookie
     document.cookie = `${SIDEBAR_COOKIE_NAME}=${open.value}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
 }
 

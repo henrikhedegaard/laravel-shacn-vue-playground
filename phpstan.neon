@@ -1,0 +1,21 @@
+parameters:
+    level: 5
+    paths:
+        - app
+        - tests
+    ignoreErrors:
+        # User model properties (Laravel dynamic properties)
+        - '#Access to an undefined property App\\Models\\User.*::\$#'
+        # Pest test method calls
+        - '#Call to an undefined method Pest\\PendingCalls\\TestCall::#'
+        # Laravel Auth Guard methods
+        - '#Call to an undefined method Illuminate\\Contracts\\Auth\\Guard::logout\(\)#'
+        # Laravel Request dynamic properties
+        - '#Access to an undefined property Illuminate\\Http\\Request::\$#'
+        # Laravel User static methods
+        - '#Call to an undefined static method App\\Models\\User::create\(\)#'
+    bootstrapFiles:
+        - vendor/bin/phpstan
+
+includes:
+    - vendor/pestphp/pest/phpstan-pest-extension.neon

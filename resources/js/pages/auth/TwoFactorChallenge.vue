@@ -14,6 +14,10 @@ interface AuthConfigContent {
     toggleText: string;
 }
 
+const showRecoveryInput = ref<boolean>(false);
+const code = ref<number[]>([]);
+const codeValue = computed<string>(() => code.value.join(""));
+
 const authConfigContent = computed<AuthConfigContent>(() => {
     if (showRecoveryInput.value) {
         return {
@@ -31,16 +35,11 @@ const authConfigContent = computed<AuthConfigContent>(() => {
     };
 });
 
-const showRecoveryInput = ref<boolean>(false);
-
 const toggleRecoveryMode = (clearErrors: () => void): void => {
     showRecoveryInput.value = !showRecoveryInput.value;
     clearErrors();
     code.value = [];
 };
-
-const code = ref<number[]>([]);
-const codeValue = computed<string>(() => code.value.join(""));
 </script>
 
 <template>

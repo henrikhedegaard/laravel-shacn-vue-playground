@@ -25,17 +25,8 @@ import {
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip";
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import PageLayout from "@/components/PageLayout.vue";
 
 const isFavorite = ref(false);
@@ -50,7 +41,11 @@ const copyText = (): void => {
 </script>
 
 <template>
-    <PageLayout title="Input Group" description="Display additional information or actions to an input or textarea" show-back-link>
+    <PageLayout
+        title="Input Group"
+        description="Display additional information or actions to an input or textarea"
+        show-back-link
+    >
         <div class="space-y-8">
             <!-- Icon & Text -->
             <Card>
@@ -107,7 +102,9 @@ const copyText = (): void => {
             <Card>
                 <CardHeader>
                     <CardTitle>Button Actions</CardTitle>
-                    <CardDescription>Add buttons to perform actions within the input group</CardDescription>
+                    <CardDescription
+                        >Add buttons to perform actions within the input group</CardDescription
+                    >
                 </CardHeader>
                 <CardContent>
                     <div class="grid w-full max-w-sm gap-6">
@@ -128,9 +125,7 @@ const copyText = (): void => {
                         <InputGroup>
                             <InputGroupInput placeholder="Type to search..." />
                             <InputGroupAddon align="inline-end">
-                                <InputGroupButton variant="secondary">
-                                    Search
-                                </InputGroupButton>
+                                <InputGroupButton variant="secondary"> Search </InputGroupButton>
                             </InputGroupAddon>
                         </InputGroup>
                         <InputGroup class="[--radius:9999px]">
@@ -142,12 +137,19 @@ const copyText = (): void => {
                                         </InputGroupButton>
                                     </InputGroupAddon>
                                 </PopoverTrigger>
-                                <PopoverContent align="start" class="flex flex-col gap-1 text-sm rounded-xl">
+                                <PopoverContent
+                                    align="start"
+                                    class="flex flex-col gap-1 text-sm rounded-xl"
+                                >
                                     <p class="font-medium">Your connection is not secure.</p>
-                                    <p>You should not enter any sensitive information on this site.</p>
+                                    <p>
+                                        You should not enter any sensitive information on this site.
+                                    </p>
                                 </PopoverContent>
                             </Popover>
-                            <InputGroupAddon class="text-muted-foreground pl-1.5"> https:// </InputGroupAddon>
+                            <InputGroupAddon class="text-muted-foreground pl-1.5">
+                                https://
+                            </InputGroupAddon>
                             <InputGroupInput />
                             <InputGroupAddon align="inline-end">
                                 <InputGroupButton size="icon-xs" @click="isFavorite = !isFavorite">
@@ -176,7 +178,11 @@ const copyText = (): void => {
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger as-child>
-                                            <InputGroupButton variant="ghost" aria-label="Info" size="icon-xs">
+                                            <InputGroupButton
+                                                variant="ghost"
+                                                aria-label="Info"
+                                                size="icon-xs"
+                                            >
                                                 <Info :size="14" />
                                             </InputGroupButton>
                                         </TooltipTrigger>
@@ -193,7 +199,11 @@ const copyText = (): void => {
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger as-child>
-                                            <InputGroupButton variant="ghost" aria-label="Help" size="icon-xs">
+                                            <InputGroupButton
+                                                variant="ghost"
+                                                aria-label="Help"
+                                                size="icon-xs"
+                                            >
                                                 <HelpCircle :size="14" />
                                             </InputGroupButton>
                                         </TooltipTrigger>
@@ -212,7 +222,10 @@ const copyText = (): void => {
             <Card>
                 <CardHeader>
                     <CardTitle>Textarea</CardTitle>
-                    <CardDescription>Input groups work with textarea using block-start/block-end alignment</CardDescription>
+                    <CardDescription
+                        >Input groups work with textarea using block-start/block-end
+                        alignment</CardDescription
+                    >
                 </CardHeader>
                 <CardContent>
                     <div class="grid w-full max-w-md gap-4">
@@ -249,7 +262,9 @@ const copyText = (): void => {
             <Card>
                 <CardHeader>
                     <CardTitle>Spinner</CardTitle>
-                    <CardDescription>Show loading indicators while processing input</CardDescription>
+                    <CardDescription
+                        >Show loading indicators while processing input</CardDescription
+                    >
                 </CardHeader>
                 <CardContent>
                     <div class="grid w-full max-w-sm gap-4">
@@ -278,7 +293,9 @@ const copyText = (): void => {
                                 <Loader :size="16" class="animate-spin" />
                             </InputGroupAddon>
                             <InputGroupAddon align="inline-end">
-                                <InputGroupText class="text-muted-foreground">Please wait...</InputGroupText>
+                                <InputGroupText class="text-muted-foreground"
+                                    >Please wait...</InputGroupText
+                                >
                             </InputGroupAddon>
                         </InputGroup>
                     </div>

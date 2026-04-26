@@ -61,6 +61,10 @@
             "@php artisan config:clear --ansi",
             "@php artisan test"
         ],
+        "test:parallel": [
+            "@php artisan config:clear --ansi",
+            "@php artisan test --parallel"
+        ],
         "rector": "vendor/bin/rector process --dry-run",
         "rector:fix": "vendor/bin/rector process",
         "post-autoload-dump": [

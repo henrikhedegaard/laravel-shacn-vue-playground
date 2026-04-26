@@ -45,14 +45,14 @@ export const useTwoFactorAuth = () => {
         }
     };
 
+    const clearErrors = (): void => {
+        errors.value = [];
+    };
+
     const clearSetupData = (): void => {
         manualSetupKey.value = null;
         qrCodeSvg.value = null;
         clearErrors();
-    };
-
-    const clearErrors = (): void => {
-        errors.value = [];
     };
 
     const clearTwoFactorAuthData = (): void => {

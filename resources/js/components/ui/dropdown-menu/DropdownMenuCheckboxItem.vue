@@ -16,7 +16,7 @@ const emits = defineEmits<DropdownMenuCheckboxItemEmits>();
 const delegatedProps = computed(() => {
     const delegated: Record<string, unknown> = {};
     for (const [key, value] of Object.entries(props)) {
-        if (key !== 'class') {
+        if (key !== "class") {
             delegated[key] = value;
         }
     }

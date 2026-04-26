@@ -23,7 +23,9 @@ withDefaults(defineProps<Props>(), {
 
     <CommandPalette />
 
-    <div class="flex min-h-screen flex-col bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100">
+    <div
+        class="flex min-h-screen flex-col bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-100"
+    >
         <AppNavbar :show-back-link="showBackLink" />
 
         <main class="flex-1 px-4 py-8">
