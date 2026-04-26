@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { Link, usePage } from "@inertiajs/vue3";
 import { Search, Sun, Moon, Monitor, ChevronLeft } from "lucide-vue-next";
 import { Button } from "@/components/ui/button";
@@ -10,9 +10,18 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+    AlertDialog,
+    AlertDialogContent,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogAction,
+} from "@/components/ui/alert-dialog";
 import { useAppearance } from "@/composables/useAppearance";
 import { useCommandPalette } from "@/composables/useCommandPalette";
-import { dashboard, login, register, logout, home } from "@/routes";
+import { dashboard, login, logout, home } from "@/routes";
 
 interface Props {
     showBackLink?: boolean;
@@ -31,6 +40,8 @@ const user = computed(
 );
 
 const isMac = typeof navigator !== "undefined" && /Mac/.test(navigator.platform);
+
+const showSignupDisabled = ref(false);
 </script>
 
 <template>
@@ -122,11 +133,23 @@ const isMac = typeof navigator !== "undefined" && /Mac/.test(navigator.platform)
                     <Link :href="login()" class="hidden sm:block">
                         <Button variant="ghost" size="sm">Log in</Button>
                     </Link>
-                    <Link :href="register()">
-                        <Button size="sm">Sign up</Button>
-                    </Link>
+                    <Button size="sm" @click="showSignupDisabled = true">Sign up</Button>
                 </template>
             </div>
         </div>
     </header>
+
+    <AlertDialog :open="showSignupDisabled" @update:open="showSignupDisabled = $event">
+        <AlertDialogContent>
+            <AlertDialogHeader>
+                <AlertDialogTitle>Sign up temporarily disabled</AlertDialogTitle>
+                <AlertDialogDescription>
+                    Registration is temporarily disabled. Please check back later.
+                </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+                <AlertDialogAction @click="showSignupDisabled = false">OK</AlertDialogAction>
+            </AlertDialogFooter>
+        </AlertDialogContent>
+    </AlertDialog>
 </template>

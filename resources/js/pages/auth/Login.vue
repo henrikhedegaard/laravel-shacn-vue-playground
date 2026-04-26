@@ -7,8 +7,17 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import AuthBase from "@/layouts/AuthLayout.vue";
-import { register } from "@/routes";
 import { request } from "@/routes/password";
+import {
+    AlertDialog,
+    AlertDialogContent,
+    AlertDialogHeader,
+    AlertDialogTitle,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogAction,
+} from "@/components/ui/alert-dialog";
+import { ref } from "vue";
 import { Form, Head } from "@inertiajs/vue3";
 import { LoaderCircle } from "lucide-vue-next";
 
@@ -16,6 +25,8 @@ defineProps<{
     status?: string;
     canResetPassword: boolean;
 }>();
+
+const showSignupDisabled = ref(false);
 </script>
 
 <template>
@@ -93,11 +104,31 @@ defineProps<{
                     Log in
                 </Button>
             </div>
-
-            <div class="text-center text-sm text-muted-foreground">
-                Don't have an account?
-                <TextLink :href="register()" :tabindex="5">Sign up</TextLink>
-            </div>
         </Form>
+
+        <div class="text-center text-sm text-muted-foreground">
+            Don't have an account?
+            <button
+                type="button"
+                class="underline underline-offset-4 hover:text-neutral-900 dark:hover:text-white"
+                @click="showSignupDisabled = true"
+            >
+                Sign up
+            </button>
+        </div>
     </AuthBase>
+
+    <AlertDialog :open="showSignupDisabled" @update:open="showSignupDisabled = $event">
+        <AlertDialogContent>
+            <AlertDialogHeader>
+                <AlertDialogTitle>Sign up temporarily disabled</AlertDialogTitle>
+                <AlertDialogDescription>
+                    Registration is temporarily disabled. Please check back later.
+                </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+                <AlertDialogAction @click="showSignupDisabled = false">OK</AlertDialogAction>
+            </AlertDialogFooter>
+        </AlertDialogContent>
+    </AlertDialog>
 </template>

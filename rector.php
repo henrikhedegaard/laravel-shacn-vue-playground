@@ -19,7 +19,7 @@ return RectorConfig::configure()
         __DIR__ . '/bootstrap/cache',
         __DIR__ . '/database/migrations',
     ])
-    ->withPhpSets(php82: true)
+    ->withPhpSets(php85: true)
     ->withPreparedSets(
         deadCode: true,
         codeQuality: true,
@@ -29,7 +29,7 @@ return RectorConfig::configure()
         strictBooleans: true
     )
     ->withSets([
-        LevelSetList::UP_TO_PHP_82,
+        LevelSetList::UP_TO_PHP_85,
         SetList::CODE_QUALITY,
         SetList::DEAD_CODE,
         SetList::EARLY_RETURN,
