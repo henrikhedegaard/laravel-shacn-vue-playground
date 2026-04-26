@@ -1,0 +1,5 @@
+echo "→ PHPStan"
+vendor/bin/phpstan analyse app tests --memory-limit=2G || exit 1
+
+echo "→ Pest"
+vendor/bin/pest || exit 1
