@@ -297,8 +297,7 @@ onUnmounted(() => {
 <template>
     <CommandDialog v-model:open="open">
         <Command class="rounded-lg border shadow-md">
-            <div class="flex items-center border-b px-3">
-                <Search class="mr-2 size-4 shrink-0 opacity-50" />
+            <div class="flex items-center border-b">
                 <CommandInput
                     placeholder="Search components..."
                     @update:model-value="filterComponents"
@@ -315,7 +314,7 @@ onUnmounted(() => {
                     >
                         <Link :href="component.href" @click="close()" class="flex items-center">
                             <span class="w-fit min-w-32">{{ component.name }}</span>
-                            <span class="ml-2 text-xs text-muted-foreground line-clamp-1">
+                            <span class="ml-2 flex-1 truncate text-xs text-muted-foreground">
                                 {{ component.description }}
                             </span>
                             <CommandShortcut v-if="component.shortcut">

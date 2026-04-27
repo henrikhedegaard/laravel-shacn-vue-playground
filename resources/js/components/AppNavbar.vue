@@ -22,6 +22,7 @@ import {
 import { useAppearance } from "@/composables/useAppearance";
 import { useCommandPalette } from "@/composables/useCommandPalette";
 import { dashboard, login, logout, home } from "@/routes";
+import Badge from "./ui/badge/Badge.vue";
 
 interface Props {
     showBackLink?: boolean;
@@ -78,16 +79,15 @@ const showSignupDisabled = ref(false);
                 <Button
                     variant="outline"
                     size="sm"
-                    class="hidden h-9 w-56 justify-between text-muted-foreground sm:flex"
+                    class="hidden h-9 rounded-full justify-between text-muted-foreground sm:flex cursor-pointer"
                     @click="showCommandPalette()"
                 >
                     <span class="flex items-center gap-2">
                         <Search :size="14" />
-                        <span>Search components...</span>
                     </span>
-                    <span class="flex items-center gap-1">
-                        <Kbd class="text-xs">{{ isMac ? "⌘" : "Ctrl" }}</Kbd>
-                        <Kbd class="text-xs">K</Kbd>
+                    <span class="flex items-center gap-0 rounded-full overflow-hidden bg-gray-100">
+                        <Kbd class="text-xs ml-0.5">{{ isMac ? "⌘" : "Ctrl" }}</Kbd>
+                        <Kbd class="text-xs -ml-1.5 bg-transparent">K</Kbd>
                     </span>
                 </Button>
                 <Button variant="ghost" size="icon" class="sm:hidden" @click="showCommandPalette()">
