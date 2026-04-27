@@ -70,6 +70,12 @@ const showSignupDisabled = ref(false);
                     >
                         Components
                     </Link>
+                    <Link
+                        href="/custom-components"
+                        class="text-muted-foreground transition-colors hover:text-neutral-800 dark:hover:text-neutral-200"
+                    >
+                        Custom Components
+                    </Link>
                 </nav>
             </div>
 

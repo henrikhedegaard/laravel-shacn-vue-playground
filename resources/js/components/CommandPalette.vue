@@ -229,6 +229,11 @@ const components: Component[] = [
         name: "Tabs",
     },
     {
+        description: "A visual representation of events in chronological order",
+        href: "/custom-components/timeline",
+        name: "Timeline",
+    },
+    {
         description: "An input for entering multiple tags",
         href: "/components/tags-input",
         name: "Tags Input",

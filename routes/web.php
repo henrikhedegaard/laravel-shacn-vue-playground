@@ -99,5 +99,9 @@ Route::get('components/table-component', fn () => Inertia::render('components/Ta
 
 Route::get('components/tabs-component', fn () => Inertia::render('components/TabsComponent'))->name('components.tabs-component');
 
+Route::get('custom-components', fn () => Inertia::render('CustomComponents'))->name('custom-components');
+
+Route::get('custom-components/timeline', fn () => Inertia::render('custom-components/Timeline'))->name('custom-components.timeline');
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
