@@ -68,13 +68,13 @@ const showSignupDisabled = ref(false);
                         href="/components"
                         class="text-muted-foreground transition-colors hover:text-neutral-800 dark:hover:text-neutral-200"
                     >
-                        Components
+                        Core
                     </Link>
                     <Link
                         href="/custom-components"
                         class="text-muted-foreground transition-colors hover:text-neutral-800 dark:hover:text-neutral-200"
                     >
-                        Custom Components
+                        Extras
                     </Link>
                 </nav>
             </div>
