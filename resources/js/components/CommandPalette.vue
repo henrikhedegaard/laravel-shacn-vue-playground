@@ -28,6 +28,7 @@ const components: Component[] = [
         description: "An image element with a fallback for representing the user",
         href: "/components/avatar",
         name: "Avatar",
+        shortcut: "⌘A",
     },
     {
         description: "A modal dialog that interrupts the user with important content",
@@ -121,7 +122,6 @@ const components: Component[] = [
             "A versatile component for displaying content with media, title, and description",
         href: "/components/item",
         name: "Item",
-        shortcut: "⌘T",
     },
     {
         description: "A placeholder for empty states with optional actions",
@@ -313,9 +313,9 @@ onUnmounted(() => {
                         :value="component.name"
                         as-child
                     >
-                        <Link :href="component.href" @click="close()">
-                            <span>{{ component.name }}</span>
-                            <span class="ml-2 text-sm text-muted-foreground">
+                        <Link :href="component.href" @click="close()" class="flex items-center">
+                            <span class="w-fit min-w-32">{{ component.name }}</span>
+                            <span class="ml-2 text-xs text-muted-foreground line-clamp-1">
                                 {{ component.description }}
                             </span>
                             <CommandShortcut v-if="component.shortcut">
